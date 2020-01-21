@@ -9,9 +9,9 @@
 import Foundation
 
 class APIService {
-    func getMovies(completion: @escaping(Result<Search, Error>) -> Void) {
+    func getMovies(page: Int, completion: @escaping(Result<Search, Error>) -> Void) {
         
-        let urlString = "http://www.omdbapi.com/?s=Batman&page=1&apikey=eeefc96f"
+        let urlString = "http://www.omdbapi.com/?s=Batman&page=" + String(page) + "&apikey=eeefc96f"
 
         guard let omdbURI = URL(string: urlString) else {
             return
