@@ -11,6 +11,7 @@ import Foundation
 class APIService {
     func getMovies(page: Int, completion: @escaping(Result<Search, Error>) -> Void) {
         
+        //TODO: Add URI in constant.
         let urlString = "http://www.omdbapi.com/?s=Batman&page=" + String(page) + "&apikey=eeefc96f"
 
         guard let omdbURI = URL(string: urlString) else {
