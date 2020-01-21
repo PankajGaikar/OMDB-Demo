@@ -16,7 +16,7 @@ class MoviesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "OMDB"
+        self.navigationItem.title = "OMDB"
         collectionView.delegate = self
         collectionView.dataSource = self
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
@@ -59,9 +59,12 @@ extension MoviesViewController: MoviesModelProtocol {
         }
     }
 }
-//extension MoviesViewController: UICollectionViewDelegateFlowLayout {
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let cell = collectionView.cellForItem(at: indexPath)
-//        return CGSize(width: UIScreen.main.bounds.size.width/2, height: cell?.frame.size.height ?? UIScreen.main.bounds.size.width/2);
-//    }
-//}
+
+extension MoviesViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let padding = 2
+        let width = (collectionView.frame.size.width - CGFloat(padding) * 2) / CGFloat(2)
+        let height = UIScreen.main.bounds.size.width/2 * 1.5
+        return CGSize(width: width, height: height)
+    }
+}
