@@ -46,10 +46,10 @@ extension MoviesViewController: UICollectionViewDelegate, UICollectionViewDataSo
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieCollectionViewCell", for: indexPath) as! MovieCollectionViewCell
-        cell.titleLabel.text = movieModel.movies[indexPath.row].title
-        cell.yearLabel.text = movieModel.movies[indexPath.row].year
-        cell.typeLabel.text = movieModel.movies[indexPath.row].type
-        cell.posterImageView.loadImageUsingCache(movieModel.movies[indexPath.row].poster)
+        cell.titleLabel.text = movieModel.getTitle(forIndex: indexPath.row)
+        cell.yearLabel.text = movieModel.getYear(forIndex: indexPath.row)
+        cell.typeLabel.text = movieModel.getType(forIndex: indexPath.row)
+        cell.posterImageView.loadImageUsingCache(movieModel.getPoster(forIndex: indexPath.row))
         return cell
     }
     
