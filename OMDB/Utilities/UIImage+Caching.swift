@@ -14,6 +14,9 @@ let imageCache = NSCache<AnyObject, AnyObject>()
 extension UIImageView {
     func loadImageUsingCache (_ urlString : String) {
         self.image = UIImage.init(named: "movie-placeholder")
+        if urlString.count == 0 {
+            return
+        }
         let url = URL(string: urlString)
         URLSession.shared.dataTask(with: url!) { (data, response, error) in
             if data != nil {

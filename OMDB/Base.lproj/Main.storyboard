@@ -112,6 +112,67 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="118.52678571428571"/>
         </scene>
+        <!--Movie Details View Controller-->
+        <scene sceneID="3mY-bO-YR4">
+            <objects>
+                <viewController storyboardIdentifier="MovieDetailsViewController" id="5Vk-Xk-llb" customClass="MovieDetailsViewController" customModule="OMDB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o5B-10-wlU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kv2-bF-8oh">
+                                <rect key="frame" x="0.0" y="44" width="414" height="552"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="kv2-bF-8oh" secondAttribute="height" multiplier="3:4" id="hhO-Kz-Uhq"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iC1-Va-XLO">
+                                <rect key="frame" x="20" y="604" width="374" height="34"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kh9-O0-Xnt">
+                                <rect key="frame" x="20" y="648" width="374" height="27"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUN-zW-wzd">
+                                <rect key="frame" x="20" y="685" width="374" height="24"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kh9-O0-Xnt" firstAttribute="top" secondItem="iC1-Va-XLO" secondAttribute="bottom" constant="10" id="6vQ-9q-T3d"/>
+                            <constraint firstItem="kv2-bF-8oh" firstAttribute="trailing" secondItem="cWF-fz-aWq" secondAttribute="trailing" id="HOJ-2M-Q1x"/>
+                            <constraint firstItem="kv2-bF-8oh" firstAttribute="top" secondItem="cWF-fz-aWq" secondAttribute="top" id="Mc3-Wa-q1v"/>
+                            <constraint firstItem="cWF-fz-aWq" firstAttribute="trailing" secondItem="iC1-Va-XLO" secondAttribute="trailing" constant="20" id="N30-y0-q3X"/>
+                            <constraint firstItem="iC1-Va-XLO" firstAttribute="leading" secondItem="cWF-fz-aWq" secondAttribute="leading" constant="20" id="P3Q-7M-sBN"/>
+                            <constraint firstItem="kh9-O0-Xnt" firstAttribute="leading" secondItem="cWF-fz-aWq" secondAttribute="leading" constant="20" id="Q4w-C9-qaJ"/>
+                            <constraint firstItem="cWF-fz-aWq" firstAttribute="trailing" secondItem="kh9-O0-Xnt" secondAttribute="trailing" constant="20" id="QJ6-pB-Mbc"/>
+                            <constraint firstItem="IUN-zW-wzd" firstAttribute="top" secondItem="kh9-O0-Xnt" secondAttribute="bottom" constant="10" id="dop-Wn-UCA"/>
+                            <constraint firstItem="cWF-fz-aWq" firstAttribute="trailing" secondItem="IUN-zW-wzd" secondAttribute="trailing" constant="20" id="gX2-SI-WTA"/>
+                            <constraint firstItem="kv2-bF-8oh" firstAttribute="leading" secondItem="cWF-fz-aWq" secondAttribute="leading" id="nKC-aN-KYr"/>
+                            <constraint firstItem="iC1-Va-XLO" firstAttribute="top" secondItem="kv2-bF-8oh" secondAttribute="bottom" constant="8" symbolic="YES" id="rs8-gW-1G2"/>
+                            <constraint firstItem="IUN-zW-wzd" firstAttribute="leading" secondItem="cWF-fz-aWq" secondAttribute="leading" constant="20" id="xVH-Mn-tBm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cWF-fz-aWq"/>
+                    </view>
+                    <connections>
+                        <outlet property="posterImageView" destination="kv2-bF-8oh" id="9BO-2z-qCW"/>
+                        <outlet property="titleLabel" destination="iC1-Va-XLO" id="CpV-0R-vb9"/>
+                        <outlet property="typeLabel" destination="IUN-zW-wzd" id="1oj-lx-kIE"/>
+                        <outlet property="yearLabel" destination="kh9-O0-Xnt" id="ZtO-SO-wDV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="05U-sn-Zhg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1813.0434782608697" y="118.52678571428571"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="WGN-J3-o8Z">
             <objects>
