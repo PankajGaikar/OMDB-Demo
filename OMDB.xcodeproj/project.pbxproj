@@ -21,6 +21,7 @@
 		BF511DA923D6362E00734044 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF511DA823D6362E00734044 /* APIService.swift */; };
 		BF511DAC23D7670A00734044 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF511DAB23D7670A00734044 /* MovieCollectionViewCell.swift */; };
 		BF511DAF23D7742A00734044 /* UIImage+Caching.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF511DAE23D7742A00734044 /* UIImage+Caching.swift */; };
+		BF511DB123D8AD1F00734044 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF511DB023D8AD1F00734044 /* MovieDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		BF511DA823D6362E00734044 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		BF511DAB23D7670A00734044 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		BF511DAE23D7742A00734044 /* UIImage+Caching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Caching.swift"; sourceTree = "<group>"; };
+		BF511DB023D8AD1F00734044 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			children = (
 				BF511DAA23D766E600734044 /* CollectionCell */,
 				BF511D7223D6328200734044 /* MoviesViewController.swift */,
+				BF511DB023D8AD1F00734044 /* MovieDetailsViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF511DB123D8AD1F00734044 /* MovieDetailsViewController.swift in Sources */,
 				BF511DA623D6350300734044 /* MovieModel.swift in Sources */,
 				BF511DA923D6362E00734044 /* APIService.swift in Sources */,
 				BF511D7323D6328200734044 /* MoviesViewController.swift in Sources */,

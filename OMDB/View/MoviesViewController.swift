@@ -59,6 +59,12 @@ extension MoviesViewController: UICollectionViewDelegate, UICollectionViewDataSo
             movieModel.getMovies()
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let movieDetailsViewController = self.storyboard?.instantiateViewController(identifier: "MovieDetailsViewController") as! MovieDetailsViewController
+        movieDetailsViewController.movie = movieModel.movies[indexPath.row]
+        self.navigationController?.pushViewController(movieDetailsViewController, animated: true)
+    }
 }
 
 //MARK:- CollectionView FlowLayout
