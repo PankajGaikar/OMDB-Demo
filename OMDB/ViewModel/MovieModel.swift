@@ -25,6 +25,28 @@ class MovieModel {
     //Data updation protocol instance
     var movieDataModelDelegate: MoviesModelDelegate?
     
+    func getTitle(forIndex: Int) -> String {
+        return movies[forIndex].title
+    }
+    
+    func getType(forIndex: Int) -> String {
+        return movies[forIndex].type
+    }
+    
+    func getYear(forIndex: Int) -> String {
+        //Extract string in local variable instead continiously accessing from array.
+        let year = movies[forIndex].year
+        let index = year.index(year.startIndex, offsetBy: min(4, year.count))
+        //Years count would be with start of series/movie
+        let yearStartedTheSeries = String(year[..<index])
+        let currentYear = Calendar.current.component(.year, from: Date())
+        return "\(currentYear - Int(yearStartedTheSeries)!) years ago"
+    }
+    
+    func getPoster(forIndex: Int) -> String {
+        return movies[forIndex].poster
+    }
+    
     func getMovies() {
         //Initial increase from 0 to 1
         page = page + 1
