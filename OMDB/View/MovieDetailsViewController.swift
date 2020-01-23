@@ -19,6 +19,7 @@ class MovieDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = movie?.title
         self.titleLabel.text = movie?.title
         self.yearLabel.text = movie?.year
         self.posterImageView.loadImageUsingCache(movie?.poster ?? "")
