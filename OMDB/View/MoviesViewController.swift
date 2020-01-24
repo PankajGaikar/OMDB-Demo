@@ -72,7 +72,10 @@ extension MoviesViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let padding = 2
         let width = (collectionView.frame.size.width - CGFloat(padding) * 2) / CGFloat(2)
-        let height = UIScreen.main.bounds.size.width/2 * 1.5
+        var height = UIScreen.main.bounds.size.width/2 * 1.5
+        if UIScreen.main.bounds.height < UIScreen.main.bounds.width {
+            height = UIScreen.main.bounds.size.height - 200
+        }
         return CGSize(width: width, height: height)
     }
 }
