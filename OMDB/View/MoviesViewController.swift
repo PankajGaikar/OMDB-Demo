@@ -70,9 +70,14 @@ extension MoviesViewController: UICollectionViewDelegate, UICollectionViewDataSo
 //MARK:- CollectionView FlowLayout
 extension MoviesViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let cell = collectionView.cellForItem(at: indexPath)
         let padding = 2
         let width = (collectionView.frame.size.width - CGFloat(padding) * 2) / CGFloat(2)
-        let height = UIScreen.main.bounds.size.width/2 * 1.5
+        var height = UIScreen.main.bounds.size.width/2 * 1.5
+        if let cellHeight = cell?.bounds.size.height {
+            height = cellHeight
+        }
         return CGSize(width: width, height: height)
     }
 }
